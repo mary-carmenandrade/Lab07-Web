@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Películas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+        .green-button {
+            display: inline-block;
+            background-color: #00cccc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-decoration: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .green-button:hover {
+            background-color: #009999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Películas</h1>
+        <ul>
+            <% peliculas.forEach(function(pelicula) { %>
+                <li>
+                    <strong>Título:</strong> <%= pelicula.titulo %><br>
+                    <strong>Género:</strong> <%= pelicula.genero %><br>
+                    <strong>Año:</strong> <%= pelicula.año %><br>
+                    <strong>Director:</strong> <%= pelicula.director %>
+                </li>
+            <% }); %>
+        </ul>
+        <a class="green-button" href="/">Ingresar Nueva Película</a>
+    </div>
+</body>
+</html>

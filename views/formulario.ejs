@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ingresar Datos de Película</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 90%;
+            padding: 5px;
+            margin-top: 7px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .purple-button {
+            display: block;
+            background-color: #8a2be2;
+            color: #fff;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin-top: 20px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .purple-button:hover {
+            background-color: #7b29c4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ingresar Datos de Película</h1>
+        <form action="/guardar-pelicula" method="POST">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" required><br>
+            <label for="genero">Género:</label>
+            <input type="text" id="genero" name ="genero" required><br>
+            <label for="año">Año:</label>
+            <input type="text" id="año" name="año" required><br>
+            <label for="director">Director:</label>
+            <input type="text" id="director" name="director" required><br>
+            <button type="submit">Aceptar</button>
+        </form>
+        <a class="purple-button" href="/peliculas">Ver Lista de Películas</a>
+    </div>
+</body>
+</html>
